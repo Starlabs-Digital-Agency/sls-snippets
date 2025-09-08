@@ -1,7 +1,5 @@
-# sls-snippets
-SLS Snippets is a free, lightweight WordPress plugin for embedding live HTML/CSS/JS anywhere via shortcode or Gutenberg block. It solves the hassle of showing interactive code in WordPress without external playgrounds or theme conflicts—each snippet renders in a sandboxed iframe, loads only when needed, and supports optional external libraries.
-
 # SLS Snippets — Installation & Usage Guide (v1.0.3)
+SLS Snippets is a free, lightweight WordPress plugin for embedding live HTML/CSS/JS anywhere via shortcode or Gutenberg block. It solves the hassle of showing interactive code in WordPress without external playgrounds or theme conflicts—each snippet renders in a sandboxed iframe, loads only when needed, and supports optional external libraries.
 
 A lightweight, free WordPress plugin to author and embed **HTML / CSS / JS** snippets via **shortcode** or **Gutenberg block**, rendered in an **isolated iframe** for safety and performance.
 
