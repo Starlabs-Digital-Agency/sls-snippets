@@ -1,0 +1,15 @@
+{
+  "apiVersion": 3,
+  "name": "sls/snippet",
+  "title": "SLS Snippet",
+  "category": "widgets",
+  "icon": "editor-code",
+  "description": "Embed an SLS Snippet by ID.",
+  "attributes": {
+    "id": { "type": "integer" },
+    "height": { "type": "string" },
+    "autorun": { "type": "boolean", "default": true }
+  },
+  "editorScript": "sls-snippets-block-edit",
+  "style": "sls-snippets-block-style"
+}

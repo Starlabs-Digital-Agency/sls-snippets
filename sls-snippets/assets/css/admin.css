@@ -1,0 +1,165 @@
+/* -------------------------------------------------------------
+   Grid Layout
+------------------------------------------------------------- */
+.sls-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.sls-pane {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 0;
+}
+.sls-label {
+  font-weight: 600;
+  margin: 0 0 6px;
+  display: block;
+}
+.sls-select {
+  margin: 0 0 8px;
+}
+
+/* -------------------------------------------------------------
+   Editor Sizing
+------------------------------------------------------------- */
+.sls-code,
+.CodeMirror {
+  width: 100% !important;
+  height: 320px !important;
+  min-height: 320px !important;
+  max-height: 320px !important;
+  resize: none !important;
+}
+.sls-pane {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+/* -------------------------------------------------------------
+   Preview
+------------------------------------------------------------- */
+#sls-preview-wrap {
+  border: 1px solid #c3c4c7;
+  background: #fff;
+  margin-top: 8px;
+  position: relative;
+  height: 360px;
+}
+#sls-preview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.sls-preview-toolbar {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+.sls-status {
+  font-size: 12px;
+  color: #666;
+}
+
+/* -------------------------------------------------------------
+   Sidebar Editor (50% width)
+------------------------------------------------------------- */
+.sls-sidebar-open {
+  position: fixed !important;
+  top: 32px; /* WP admin bar offset */
+  left: 0;
+  width: 50% !important;
+  height: calc(100% - 32px) !important;
+  background: #fff;
+  z-index: 9999;
+  display: flex !important;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.sls-sidebar-open .CodeMirror {
+  flex: 1;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: unset !important;
+  max-height: unset !important;
+}
+
+/* Sidebar close button */
+.sls-sidebar-open .sls-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: 0;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+  z-index: 10000;
+}
+.sls-sidebar-open .sls-close-btn:hover {
+  color: #000;
+}
+
+/* -------------------------------------------------------------
+   Fullscreen Preview
+------------------------------------------------------------- */
+#sls-preview-wrap.sls-fullscreen {
+  position: fixed !important;
+  top: 32px; /* WP admin bar offset */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: #fff;
+  height: calc(100% - 32px) !important;
+}
+#sls-preview-wrap.sls-fullscreen #sls-preview {
+  height: 100% !important;
+}
+
+/* Close button (preview) */
+#sls-preview-wrap .sls-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: 0;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+  z-index: 10000;
+}
+#sls-preview-wrap .sls-close-btn:hover {
+  color: #000;
+}
+
+/* -------------------------------------------------------------
+   Buttons
+------------------------------------------------------------- */
+.sls-btn-icon {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 4px;
+}
+.sls-btn-icon:hover {
+  color: #000;
+}
+
+/* -------------------------------------------------------------
+   Responsive
+------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sls-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,8 @@
+/* Frontend embed container */
+.sls-embed{ position:relative; width:100%; background:transparent; min-height:120px; }
+.sls-embed iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+.sls-embed__fallback{ padding:12px; font-size:14px; color:#666; }
+
+/* Optional: click-to-run overlay (used when autorun=false) */
+.sls-embed__overlay{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.04); cursor:pointer; font:600 14px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:#222; }
+.sls-embed__btn{ padding:8px 12px; border-radius:6px; border:1px solid #c3c4c7; background:#fff; }
